@@ -1,0 +1,160 @@
+.waveform-container {
+  padding: 1.5rem 1.6rem 3rem 1.6rem;
+  position: relative;
+}
+
+.waveform {
+  /*border: 1px solid;*/
+  width: 100%;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.back-waveform,
+.front-waveform {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.back-waveform > div,
+.front-waveform > div {
+  min-height: 5px;
+  min-width: 1px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.back-waveform > div {
+  background-color: #0000005c;
+}
+
+.front-waveform {
+  transition: var(--transition, all 0.3s linear);
+  clip-path: polygon(0% 0%, var(--dx, 0%) 0%, var(--dx, 0%) 100%, 0 100%);
+}
+
+.scrubber {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.scrubber:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.scrubber:active {
+  cursor: grabbing;
+}
+
+.context-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #00000029;
+  z-index: 1;
+}
+
+.context-menu {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  border: 2px solid;
+  box-shadow: 3px 3px;
+  z-index: 2;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.context-menu button {
+  color: black;
+  background-color: white;
+  font-size: 14px;
+  text-align: left;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  outline-color: black;
+}
+.context-menu button:hover {
+  color: white;
+  background-color: black;
+}
+
+.exit-context-menu {
+  border-top: 2px dashed;
+}
+
+.waveform-comment {
+  width: 2px;
+  position: absolute;
+  left: var(--l);
+  bottom: 0;
+  height: calc(100% + 10px);
+  background-color: black;
+}
+
+.waveform-commenter-label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  translate: -50% -100%;
+}
+
+.waveform-comment-text {
+  position: absolute;
+  width: max-content;
+  font-size: 1.2rem;
+  top: 0;
+  left: 0;
+  translate: 10px -101%;
+  border: 2px solid;
+  padding: 0 5px;
+  border-left: none;
+  opacity: 0;
+  background-color: white;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.waveform-comment-text-left {
+  border-right: none;
+  border-left: 3px solid;
+  left: 0;
+  translate: calc(-100% + -9px) -102%;
+}
+
+.waveform-comment:hover .waveform-comment-text {
+  opacity: 1;
+  pointer-events: auto;
+}

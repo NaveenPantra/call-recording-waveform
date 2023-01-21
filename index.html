@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="scrubber.css" />
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Waveform Annotation</title>
+  </head>
+  <body>
+    <header>
+      <h1>Plivo | Sellular</h1>
+    </header>
+
+    <main>
+      <div class="audio-details">
+        <h2>
+          Call with&nbsp;<span>Naveen Pantra</span>
+          <ion-icon name="link"></ion-icon>
+        </h2>
+        <section class="player">
+          <div class="audio-duration">
+            <span class="audio_current_time_text">00:00</span>/<span
+              class="audio_total_duration"
+              >00:00</span
+            >
+          </div>
+          <div class="waveform-container">
+            <div class="waveform">
+              <div class="back-waveform"></div>
+              <div class="front-waveform" style="--dx: 0%"></div>
+              <div class="scrubber"></div>
+              <div class="waveform-comment" style="--l: 3%">
+                <p class="waveform-commenter-label" title="Deepak Kumar">DK</p>
+                <p class="waveform-comment-text">Good introduction.</p>
+              </div>
+              <div class="waveform-comment" style="--l: 30%">
+                <p class="waveform-commenter-label" title="Dony James">DJ</p>
+                <p class="waveform-comment-text">Make sale happen here!!</p>
+              </div>
+              <div class="waveform-comment" style="--l: 40%">
+                <p class="waveform-commenter-label" title="Deepika Prajapati">
+                  DP
+                </p>
+                <p class="waveform-comment-text">This is a test comment.</p>
+              </div>
+              <div class="waveform-comment" style="--l: 60%">
+                <p class="waveform-commenter-label" title="Pradeep Kumar Pamba">
+                  PP
+                </p>
+                <p class="waveform-comment-text waveform-comment-text-left">
+                  Introduce a new feature here.
+                </p>
+              </div>
+              <div class="waveform-comment" style="--l: 80%">
+                <p class="waveform-commenter-label" title="Esrath Muqayyar">
+                  EM
+                </p>
+                <p class="waveform-comment-text waveform-comment-text-left">
+                  Point to note...
+                </p>
+              </div>
+              <div class="live-comment-stick hide"></div>
+            </div>
+            <div class="context-menu-backdrop hide"></div>
+            <div class="context-menu hide">
+              <button class="add-cmt-btn">Add Comment</button>
+              <button class="select-segment">Start Segmenting</button>
+              <button class="select-segment">Copy URL</button>
+              <button class="select-segment">Restart</button>
+              <button class="exit-context-menu">Exit</button>
+            </div>
+          </div>
+          <div class="live-comment-box hide">
+            <img
+              src="https://thumbs.dreamstime.com/b/digital-pixel-cyber-avatar-icon-computer-technology-security-hacking-black-white-face-person-vector-bit-abstract-symbol-design-169717259.jpg"
+              alt="user"
+              class="commenter-img"
+            />
+            <div class="commenter-details">
+              <p>Naveen Pantra <span class="live-comment-time">00:23</span></p>
+              <p>SDE | Sellular | Plivo</p>
+            </div>
+            <textarea
+              class="live-commenter-comment"
+              rows="5"
+              placeholder="Your comment goes here!!!"
+            ></textarea>
+            <div class="commenter-comment-options">
+              <button class="live-comment-cancel">Cancel</button>
+              <button class="live-comment-save">Save</button>
+            </div>
+          </div>
+          <div class="player-controls">
+            <button class="player-playback-speed">
+              <ion-icon name="speedometer-sharp"></ion-icon>
+              <span class="playback-rate">1.0X</span>
+            </button>
+            <button class="seek_minus_10">
+              <ion-icon name="play-back-sharp"></ion-icon>
+            </button>
+            <button class="audio_player_play">
+              <ion-icon class="play-icon" name="play-sharp"></ion-icon>
+              <ion-icon class="pause-icon hide" name="pause-sharp"></ion-icon>
+            </button>
+            <button class="seek_plus_10">
+              <ion-icon name="play-forward-sharp"></ion-icon>
+            </button>
+            <button class="player-volume-ctrl">
+              <input
+                type="range"
+                class="audio-volume-slider"
+                min="0"
+                max="1"
+                value="0.8"
+                step=".01"
+              />
+              <ion-icon class="volume-out" name="volume-high-sharp"></ion-icon>
+              <ion-icon class="volume-muted hide" name="volume-off-sharp"></ion-icon>
+            </button>
+          </div>
+        </section>
+      </div>
+      <section class="comments-container">
+        <h3>Comments Received...</h3>
+        <!--   SATHWIK A     -->
+        <div class="comment-box">
+          <img
+            src="https://previews.123rf.com/images/yupiramos/yupiramos1801/yupiramos180112164/93598955-pixelated-face-boy-video-game-avatar-vector-illustration-black-and-white-design.jpg"
+            alt="user"
+            class="commenter-img"
+          />
+          <div class="commenter-details">
+            <p>Sathwik A <span>01:03</span></p>
+            <p>SDE-3 | Plivo</p>
+          </div>
+          <div class="commenter-comment">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer.
+          </div>
+          <div class="commenter-comment-options">
+            <button class="comment-link">Like&middot;1</button>
+            <button class="comment-reply">Reply</button>
+          </div>
+        </div>
+        <!--   VISHNU SHANKARAN     -->
+        <div class="comment-box">
+          <img
+            src="https://64.media.tumblr.com/21037c5ac677d732c6dbbac18ac52946/tumblr_pe7vpgaXQC1tjl5mlo1_500.png"
+            alt="user"
+            class="commenter-img"
+          />
+          <div class="commenter-details">
+            <p>Vishnu Shankaran <span>01:40</span></p>
+            <p>SDE-3 | Plivo</p>
+          </div>
+          <div class="commenter-comment">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer.
+          </div>
+          <div class="commenter-comment-options">
+            <button class="comment-link">Like&middot;5</button>
+            <button class="comment-reply">Reply</button>
+          </div>
+          <div class="commenter-replies">
+            <!--   Anand S     -->
+            <div class="comment-box">
+              <img
+                src="https://cdna.artstation.com/p/assets/images/images/044/872/910/large/batu-unutmaz-aangwmjstoutln.jpg?1641374547"
+                alt="user"
+                class="commenter-img"
+              />
+              <div class="commenter-details">
+                <p>Anand Srinivasagam</p>
+                <p>SDM | Plivo</p>
+              </div>
+              <div class="commenter-comment">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer.
+              </div>
+              <div class="commenter-comment-options">
+                <button class="comment-link">Like&middot;1</button>
+                <button class="comment-reply">Reply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--   NAVEEN PANTRA     -->
+        <div class="comment-box">
+          <img
+            src="https://thumbs.dreamstime.com/b/digital-pixel-cyber-avatar-icon-computer-technology-security-hacking-black-white-face-person-vector-bit-abstract-symbol-design-169717259.jpg"
+            alt="user"
+            class="commenter-img"
+          />
+          <div class="commenter-details">
+            <p>Naveen Pantra <span>00:23</span></p>
+            <p>SDE | Sellular | Plivo</p>
+          </div>
+          <div class="commenter-comment">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </div>
+          <div class="commenter-comment-options">
+            <button class="comment-link">Like&middot;10</button>
+            <button class="comment-reply">Reply</button>
+          </div>
+        </div>
+        <!--   Deepak    -->
+        <div class="comment-box">
+          <img
+            src="https://c8.alamy.com/comp/WXCX26/a-simple-monster-pixel-face-black-and-white-WXCX26.jpg"
+            alt="user"
+            class="commenter-img"
+          />
+          <div class="commenter-details">
+            <p>Deepak V <span>00:10</span></p>
+            <p>Software Engineer | Plivo</p>
+          </div>
+          <div class="commenter-comment">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer.
+          </div>
+          <div class="commenter-comment-options">
+            <button class="comment-link">Like&middot;1</button>
+            <button class="comment-reply">Reply</button>
+          </div>
+        </div>
+        <!--   PRATEEK Agarwal     -->
+        <div class="comment-box">
+          <img
+            src="https://cdnb.artstation.com/p/assets/images/images/047/467/831/large/zak-annable-sot-square-export.jpg?1647637583"
+            alt="user"
+            class="commenter-img"
+          />
+          <div class="commenter-details">
+            <p>Prateek Agarwal <span>00:59</span></p>
+            <p>Product @ Plivo</p>
+          </div>
+          <div class="commenter-comment">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer.
+          </div>
+          <div class="commenter-comment-options">
+            <button class="comment-link">Like&middot;1</button>
+            <button class="comment-reply">Reply</button>
+          </div>
+          <div class="commenter-replies">
+            <!--    JAYKRISHNAN NAIR        -->
+            <div class="comment-box">
+              <img
+                src="https://e7.pngegg.com/pngimages/760/55/png-clipart-undertale-sprite-pixel-art-ninja-cartoon-fictional-character-thumbnail.png"
+                alt="user"
+                class="commenter-img"
+              />
+              <div class="commenter-details">
+                <p>Jaykrishnan Nair</p>
+                <p>Product Design @ Plivo</p>
+              </div>
+              <div class="commenter-comment">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer.
+              </div>
+              <div class="commenter-comment-options">
+                <button class="comment-link">Like&middot;1</button>
+                <button class="comment-reply">Reply</button>
+              </div>
+            </div>
+            <!--    SIDDHARTH K        -->
+            <div class="comment-box">
+              <img
+                src="https://i.pinimg.com/474x/2c/54/c8/2c54c885bec02dc903a6904c68fbc0b8.jpg"
+                alt="user"
+                class="commenter-img"
+              />
+              <div class="commenter-details">
+                <p>Siddharth K</p>
+                <p>Product @ Plivo</p>
+              </div>
+              <div class="commenter-comment">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer.
+              </div>
+              <div class="commenter-comment-options">
+                <button class="comment-link">Like&middot;1</button>
+                <button class="comment-reply">Reply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--   PRATIME RAJPUT     -->
+        <div class="comment-box">
+          <img
+            src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/dc40f677393c655.png"
+            alt="user"
+            class="commenter-img"
+          />
+          <div class="commenter-details">
+            <p>Pratima Rajput <span>01:33</span></p>
+            <p>Product Design @ Plivo</p>
+          </div>
+          <div class="commenter-comment">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer.
+          </div>
+          <div class="commenter-comment-options">
+            <button class="comment-link">Like&middot;1</button>
+            <button class="comment-reply">Reply</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <div class="call-details">
+        <h4>Call Details</h4>
+        <div class="call-basic-info">
+          <p><ion-icon name="arrow-up-sharp"></ion-icon> Outgoing call</p>
+          <p>Fri 20 May, 2022 - 13:32</p>
+        </div>
+        <div>
+          <h5>Participants <span>(3)</span></h5>
+          <p>Naveen Pantra, Sathwik A, Vishnu Shankaran</p>
+          <div class="participants-timeline-container">
+            <div class="participants-info">
+              <div class="participant-info">
+                <h6>Naveen Pantra</h6>
+                <p>+91 94934 64869</p>
+              </div>
+              <div class="participant-info">
+                <h6>Sathwik A</h6>
+                <p>+91 89433 23452</p>
+              </div>
+              <div class="participant-info">
+                <h6>Vishnu Shankaran</h6>
+                <p>+1 (233) - 23323</p>
+              </div>
+            </div>
+            <div class="participants-timeline">
+              <div class="participant-timeline"></div>
+              <div class="participant-timeline">
+                <div
+                  class="participant-time-line-segment"
+                  style="--l: 0%; --w: 70%"
+                ></div>
+              </div>
+              <div class="participant-timeline">
+                <div
+                  class="participant-time-line-segment"
+                  style="--l: 5%; --w: 30%"
+                ></div>
+
+                <div
+                  class="participant-time-line-segment"
+                  style="--l: 60%; --w: 40%"
+                ></div>
+              </div>
+              <div class="participant-timeline-progress"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5>Disposition</h5>
+          <p>Nothing</p>
+        </div>
+        <div>
+          <h5>Purpose</h5>
+          <p>Nothing</p>
+        </div>
+        <div>
+          <h5>Notes</h5>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years
+          </p>
+        </div>
+      </div>
+
+      <div class="wave_surfer hide"></div>
+    </aside>
+
+    <script src="scrubber.js"></script>
+    <script src="waveform.js"></script>
+    <script src="app.js"></script>
+    <script src="audioControls.js"></script>
+  </body>
+</html>
