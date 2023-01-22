@@ -1,5 +1,6 @@
 const CONSTANTS = {
   DOMSelectors: {
+    AUDIO_PLAYER_CONTAINER: ".player",
     WAVE_FORM_WRAPPER: ".waveform",
     WAVE_FORM_BCK: ".back-waveform",
     WAVE_FORM_FRONT: ".front-waveform",
@@ -25,6 +26,8 @@ const CONSTANTS = {
     DOM_AUDIO_PLAYER: "dom_audio_player",
     AUDIO_SCRUBBER: "scrubber",
     HIDE: "hide",
+    POINTER_EVENTS_VAR: "--pointer-events",
+    OPACITY_VAR: "--opacity",
   },
   SEEK_TRANSITION: "all .3s linear",
   SEEK_TRANSITION_0: "all 0s linear",
@@ -161,6 +164,17 @@ const view = (function (model) {
     requestAnimationFrame(updateScrubberPosition);
   }
 
+  function updatePlayerInteractions() {
+    DOMElements.AUDIO_PLAYER_CONTAINER.style.setProperty(
+      CONSTANTS.DOM_STRINGS.POINTER_EVENTS_VAR,
+      "auto"
+    );
+    DOMElements.AUDIO_PLAYER_CONTAINER.style.setProperty(
+      CONSTANTS.DOM_STRINGS.OPACITY_VAR,
+      "1"
+    );
+  }
+
   return {
     playAudio,
     pauseAudio,
@@ -171,6 +185,7 @@ const view = (function (model) {
     updateCurrentAudioTimeDOM,
     updatePlaybackRate,
     toggleMuteAudioPlayer,
+    updatePlayerInteractions,
   };
 })(model);
 
@@ -244,6 +259,7 @@ const AudioController = (function (model, view) {
     model.totalAudioDuration = getAudioDuration();
     view.updateTotalDurationDOM();
     view.updateCurrentAudioTimeDOM(0);
+    view.updatePlayerInteractions();
   }
 
   function handleAudioWaiting() {

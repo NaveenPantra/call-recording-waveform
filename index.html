@@ -31,11 +31,11 @@
           Call with&nbsp;<span>Naveen Pantra</span>
           <ion-icon name="link"></ion-icon>
         </h2>
-        <section class="player">
+        <section class="player" style="--pointer-events: none; --opacity: 0.5">
           <div class="audio-duration">
             <span class="audio_current_time_text">00:00</span>/<span
               class="audio_total_duration"
-              >00:00</span
+              >Buffering...</span
             >
           </div>
           <div class="waveform-container">
@@ -129,7 +129,10 @@
                 step=".01"
               />
               <ion-icon class="volume-out" name="volume-high-sharp"></ion-icon>
-              <ion-icon class="volume-muted hide" name="volume-off-sharp"></ion-icon>
+              <ion-icon
+                class="volume-muted hide"
+                name="volume-off-sharp"
+              ></ion-icon>
             </button>
           </div>
         </section>

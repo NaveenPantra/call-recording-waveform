@@ -166,6 +166,8 @@ aside {
   color: white;
   background: black;
   font-size: 25px;
+  pointer-events: var(--pointer-events);
+  opacity: var(--opacity);
 
   display: flex;
   align-items: center;
