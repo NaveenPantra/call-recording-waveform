@@ -28,6 +28,9 @@ const CONSTANTS = {
     HIDE: "hide",
     POINTER_EVENTS_VAR: "--pointer-events",
     OPACITY_VAR: "--opacity",
+
+    PRELOAD_METADATA: "metadata",
+    PRELOAD: "preload",
   },
   SEEK_TRANSITION: "all .3s linear",
   SEEK_TRANSITION_0: "all 0s linear",
@@ -94,6 +97,10 @@ const view = (function (model) {
     audio.controls = true;
     audio.classList.add(CONSTANTS.DOM_STRINGS.DOM_AUDIO_PLAYER);
     audio.classList.add(CONSTANTS.DOM_STRINGS.HIDE);
+    audio.setAttribute(
+      CONSTANTS.DOM_STRINGS.PRELOAD,
+      CONSTANTS.DOM_STRINGS.PRELOAD_METADATA
+    );
     DOMElements.ASIDE.appendChild(audio);
     DOMElements = utils.getDOMElements();
     window.audio = audio;
