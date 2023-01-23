@@ -456,6 +456,11 @@ aside p:has(ion-icon) {
   gap: 1.6rem;
 }
 
+.soft-hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 .hide {
   display: none;

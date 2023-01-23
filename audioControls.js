@@ -26,6 +26,7 @@ const CONSTANTS = {
     DOM_AUDIO_PLAYER: "dom_audio_player",
     AUDIO_SCRUBBER: "scrubber",
     HIDE: "hide",
+    SOFT_HIDE: "soft-hide",
     POINTER_EVENTS_VAR: "--pointer-events",
     OPACITY_VAR: "--opacity",
 
@@ -96,7 +97,7 @@ const view = (function (model) {
     const audio = new Audio(CONSTANTS.URL);
     audio.controls = true;
     audio.classList.add(CONSTANTS.DOM_STRINGS.DOM_AUDIO_PLAYER);
-    audio.classList.add(CONSTANTS.DOM_STRINGS.HIDE);
+    audio.classList.add(CONSTANTS.DOM_STRINGS.SOFT_HIDE);
     audio.setAttribute(
       CONSTANTS.DOM_STRINGS.PRELOAD,
       CONSTANTS.DOM_STRINGS.PRELOAD_METADATA
