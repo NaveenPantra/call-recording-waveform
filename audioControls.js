@@ -94,17 +94,16 @@ const view = (function (model) {
   let DOMElements = utils.getDOMElements();
 
   function initDOMAudioPlayer() {
-    const audio = new Audio(CONSTANTS.URL);
-    audio.controls = true;
-    audio.classList.add(CONSTANTS.DOM_STRINGS.DOM_AUDIO_PLAYER);
-    audio.classList.add(CONSTANTS.DOM_STRINGS.SOFT_HIDE);
-    audio.setAttribute(
-      CONSTANTS.DOM_STRINGS.PRELOAD,
-      CONSTANTS.DOM_STRINGS.PRELOAD_METADATA
-    );
-    DOMElements.ASIDE.appendChild(audio);
-    DOMElements = utils.getDOMElements();
-    window.audio = audio;
+    // const audio = new Audio(CONSTANTS.URL);
+    // audio.controls = false;
+    // audio.classList.add(CONSTANTS.DOM_STRINGS.DOM_AUDIO_PLAYER);
+    // audio.classList.add(CONSTANTS.DOM_STRINGS.SOFT_HIDE);
+    // audio.setAttribute(
+    //   CONSTANTS.DOM_STRINGS.PRELOAD,
+    //   CONSTANTS.DOM_STRINGS.PRELOAD_METADATA
+    // );
+    // DOMElements.ASIDE.appendChild(audio);
+    // DOMElements = utils.getDOMElements();
   }
 
   function playAudio() {
