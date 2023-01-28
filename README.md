@@ -5,6 +5,12 @@ Audio waveform for calls and comments.
 3. Seek audio player.
 4. Playback change and volume control in audio control.
 
+### Backstory
+This is evloled from other POCs overtime.
+1. Audio Waveform - https://github.com/NaveenPantra/audio-waveform
+2. Call Participants - https://github.com/NaveenPantra/call-participants
+3. Voicemail Recoridng - https://github.com/NaveenPantra/voicemail-recording
+
 ### Screenshot
 |<img width="1792" alt="Screenshot 2023-01-21 at 20 02 21" src="https://user-images.githubusercontent.com/26146760/213871622-ce9bd91b-794f-4324-99d4-3a6dbe842659.png">|<img width="1792" alt="Screenshot 2023-01-21 at 20 02 38" src="https://user-images.githubusercontent.com/26146760/213871634-5eb160ff-9237-4b10-8780-691bc643d82e.png">|
 |-|-|
