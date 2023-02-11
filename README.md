@@ -4,6 +4,7 @@ Audio waveform for calls and comments.
 2. The participants timeline will move according to audioplayer timeline.
 3. Seek audio player.
 4. Playback change and volume control in audio control.
+5. Comments in the audio player will automatically reveal within 5s to -2s proximity of the current audio time while playing.
 
 ### Backstory
 This is evloled from other POCs overtime.
