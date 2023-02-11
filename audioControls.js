@@ -29,6 +29,7 @@ const CONSTANTS = {
     SOFT_HIDE: "soft-hide",
     POINTER_EVENTS_VAR: "--pointer-events",
     OPACITY_VAR: "--opacity",
+    ACTIVE: "active",
 
     PRELOAD_METADATA: "metadata",
     PRELOAD: "preload",

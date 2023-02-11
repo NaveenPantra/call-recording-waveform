@@ -156,7 +156,8 @@
   translate: calc(-100% + -9px) -102%;
 }
 
-.waveform-comment:hover .waveform-comment-text {
+.waveform-comment:hover .waveform-comment-text,
+.waveform-comment.active .waveform-comment-text {
   opacity: 1;
   pointer-events: auto;
 }
