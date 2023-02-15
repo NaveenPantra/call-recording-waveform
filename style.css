@@ -219,7 +219,8 @@ aside {
   margin: 0;
 }
 
-.audio-volume-slider::-webkit-slider-thumb {
+.audio-volume-slider::-webkit-slider-thumb,
+.audio-volume-slider::-moz-range-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 14px;
@@ -227,13 +228,6 @@ aside {
   background: black;
   cursor: pointer;
   border: 2px solid white;
-}
-
-.audio-volume-slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #04AA6D;
-  cursor: pointer;
 }
 
 .player-controls ion-icon {
