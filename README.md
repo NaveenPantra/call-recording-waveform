@@ -1,4 +1,10 @@
 # call-recording-waveform
+### Actual implementation on [sellular.com](https://www.sellular.com)
+
+
+https://github.com/NaveenPantra/call-recording-waveform/assets/26146760/d4731392-9e34-4a6b-a760-5583c2dd9349
+
+
 Audio waveform for calls and comments.
 1. Right click on audio waveform to add comments - Context menu will show the options.
 2. The participants timeline will move according to audioplayer timeline.
