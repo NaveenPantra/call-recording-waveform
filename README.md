@@ -4,7 +4,7 @@
 
 [https://github.com/NaveenPantra/call-recording-waveform/assets/26146760/d4731392-9e34-4a6b-a760-5583c2dd9349](https://github.com/NaveenPantra/call-recording-waveform/assets/26146760/49f9ce49-59e7-4d56-94ed-5c9767795fd0)
 
-#### React Impl WIKI - https://github.com/NaveenPantra/call-recording-waveform/wiki/PR-in-Sellular.com
+#### React Impl WIKI - https://github.com/NaveenPantra/call-recording-waveform/wiki
 
 Audio waveform for calls and comments.
 1. Right click on audio waveform to add comments - Context menu will show the options.
