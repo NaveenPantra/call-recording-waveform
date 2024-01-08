@@ -20,6 +20,11 @@ body {
   grid-template-columns: 70% 30%;
 }
 
+a, a:visited, a:hover, a:active {
+  color: inherit;
+
+}
+
 button {
   color: white;
   background: black;
@@ -53,7 +58,7 @@ h2 {
   justify-self: flex-start;
 }
 
-h2 span {
+h2 a {
   cursor: pointer;
   font-weight: bold;
   position: relative;
@@ -63,30 +68,30 @@ h2 span {
   transition: color 0.3s linear;
 }
 
-h2 span::after {
+h2 a::after {
   content: "";
   position: absolute;
-  bottom: 20%;
+  bottom: 24%;
   left: 0;
   right: 0;
   z-index: -1;
   display: block;
-  height: 17%;
+  height: 18%;
   background: #00000078;
-  scale: 1 1;
+  scale: 1.02 1;
 
   transition: all 0.3s ease-in-out;
 }
 
-h2 span:hover {
+h2 a:hover {
   color: white;
 }
 
-h2 span:hover::after {
-  bottom: 36%;
+h2 a:hover::after {
+  bottom: 42%;
   /*height: 100%;*/
   background: black;
-  scale: 1.05 4;
+  scale: 1.06 4.5;
 }
 
 h2 ion-icon {
@@ -463,4 +468,13 @@ aside p:has(ion-icon) {
   pointer-events: none;
   width: 0;
   height: 0;
+}
+
+.mention {
+  display: inline-block;
+  background: black;
+  color: white;
+  font-family: monospace;
+  line-height: 1.4;
+  padding: 1px 5px;
 }
