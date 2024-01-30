@@ -2,8 +2,15 @@
 ### React Impl WIKI - https://github.com/NaveenPantra/call-recording-waveform/wiki
 ### Actual implementation on [sellular.com](https://www.sellular.com)
 
-
+#### React Player
 [https://github.com/NaveenPantra/call-recording-waveform/assets/26146760/d4731392-9e34-4a6b-a760-5583c2dd9349](https://github.com/NaveenPantra/call-recording-waveform/assets/26146760/49f9ce49-59e7-4d56-94ed-5c9767795fd0)
+
+#### Waveform transformation from single line
+
+
+https://github.com/NaveenPantra/call-recording-waveform/assets/26146760/49ed9885-4e3d-4aed-b49c-440b8031e9cd
+
+
 
 
 Audio waveform for calls and comments.
