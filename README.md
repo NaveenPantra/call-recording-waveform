@@ -19,8 +19,7 @@ Audio waveform for calls and comments.
 4. Playback change and volume control in audio control.
 5. Comments in the audio player will automatically reveal within 5s to -2s proximity of the current audio time while playing.
 
-### Backstory
-This has evolved from other POCs over time.
+### Similar implementations.
 1. Audio Waveform - https://github.com/NaveenPantra/audio-waveform
 2. Call Participants - https://github.com/NaveenPantra/call-participants
 3. Voicemail Recording - https://github.com/NaveenPantra/voicemail-recording
